@@ -1,20 +1,25 @@
-<<<<<<< HEAD
-# React + Vite
+http://localhost:5173/
+MediHelp 🩺
+Bridging India's Health Communication Gap.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MediHelp is an AI-driven platform that simplifies complex medical terminology into easy-to-understand language. By allowing users to upload reports in various formats and receive explanations in multiple regional languages, it empowers patients to take control of their health journey.
 
-Currently, two official plugins are available:
+🚀 Features
+Multi-Format Support: Upload reports as PDFs, Images (JPG/PNG), or simply Paste Text directly into the interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Multilingual Support: Get explanations in 12 different languages to ensure clarity regardless of your primary tongue.
 
-## React Compiler
+Context-Aware Simplification: Tailors the explanation based on the user's age group (e.g., Adult 18-59 yrs) and specific concerns.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+AI Chat Integration: A dedicated chat feature to ask follow-up questions about your simplified report.
 
-## Expanding the ESLint configuration
+Privacy First: Designed to process medical data securely and provide instant insights.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# medihelp
->>>>>>> efccad1682bc676a7d1b86a06c4c7905fb6ea2c6
+🛠️ Tech Stack
+Frontend: React.js / Vite (Running on localhost:5173)
+
+Styling: Tailwind CSS (Dark Mode optimized)
+
+AI Engine: Gemini API / LLM for medical text processing
+
+Icons: Lucide React / FontAwesome
