@@ -1,16 +1,16 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 
-const BACKEND = "http://localhost:3001";
+
 
 // ── API helpers ───────────────────────────────────────────────────
 const post = async (endpoint, body) => {
-  const res = await fetch(BACKEND + endpoint, {
+  const res = await fetch("/api/chat", {
     method : "POST",
     headers: { "Content-Type": "application/json" },
-    body   : JSON.stringify(body),
+    body   : JSON.stringify({ route: endpoint.replace("/api/",""), ...body }),
   });
   let data;
-  try { data = await res.json(); } catch (_) { throw new Error("Server error. Is node server.js running?"); }
+  try { data = await res.json(); } catch (_) { throw new Error("Server error."); }
   if (data.error) throw new Error(data.error);
   return data.text || "";
 };
@@ -237,7 +237,7 @@ function Bg() {
 function ServerDot() {
   const [status, setStatus] = useState("checking");
   useEffect(() => {
-    fetch(BACKEND + "/")
+    fetch("/api/chat", { method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify({route:"health"}) })
       .then((r) => r.json())
       .then((d) => setStatus(d.keySet ? "online" : "nokey"))
       .catch(() => setStatus("offline"));
