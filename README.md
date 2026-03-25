@@ -1,4 +1,4 @@
-http://localhost:5173/
+getmedihelp.vercel.app
 
 MediHelp 🩺
 Bridging India's Health Communication Gap.
